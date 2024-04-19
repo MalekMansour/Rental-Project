@@ -1,6 +1,8 @@
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import QIcon
 import sys
 import csv
-from PyQt5.QtWidgets import *
+
 
 # Global variables for data storage
 rentals_data = []
@@ -52,6 +54,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Equipment Rental System")
+        self.setGeometry(100, 100, 800, 600)  # Set window size
+        self.setStyleSheet("background-color: #778899;")  
         self.initUI()
         read_data_from_csv()  # Read initial data from CSV files
 
@@ -63,27 +67,33 @@ class MainWindow(QMainWindow):
         self.layout = QVBoxLayout(self.central_widget)
 
         # Add buttons for actions
-        self.add_equipment_button = QPushButton("Add Equipment")
+        self.add_equipment_button = QPushButton("Add Equipment", self)
+        self.add_equipment_button.setStyleSheet("font-size: 16px; padding: 10px; border-radius: 5px; border: 2px solid #4CAF50; background-color: #f1f1f1;")
         self.add_equipment_button.clicked.connect(self.add_equipment_dialog)
         self.layout.addWidget(self.add_equipment_button)
 
-        self.delete_equipment_button = QPushButton("Delete Equipment")
+        self.delete_equipment_button = QPushButton("Delete Equipment", self)
+        self.delete_equipment_button.setStyleSheet("font-size: 16px; padding: 10px; border-radius: 5px; border: 2px solid #f44336; background-color: #f1f1f1;")
         self.delete_equipment_button.clicked.connect(self.delete_equipment)
         self.layout.addWidget(self.delete_equipment_button)
 
-        self.add_client_button = QPushButton("Add New Client")
+        self.add_client_button = QPushButton("Add New Client", self)
+        self.add_client_button.setStyleSheet("font-size: 16px; padding: 10px; border-radius: 5px; border: 2px solid #2196F3; background-color: #f1f1f1;")
         self.add_client_button.clicked.connect(self.add_client_dialog)
         self.layout.addWidget(self.add_client_button)
 
-        self.display_equipment_button = QPushButton("Display Equipment")
+        self.display_equipment_button = QPushButton("Display Equipment", self)
+        self.display_equipment_button.setStyleSheet("font-size: 16px; padding: 10px; border-radius: 5px; border: 2px solid #FFC107; background-color: #f1f1f1;")
         self.display_equipment_button.clicked.connect(self.display_equipment)
         self.layout.addWidget(self.display_equipment_button)
 
-        self.display_clients_button = QPushButton("Display All Clients")
+        self.display_clients_button = QPushButton("Display All Clients", self)
+        self.display_clients_button.setStyleSheet("font-size: 16px; padding: 10px; border-radius: 5px; border: 2px solid #9C27B0; background-color: #f1f1f1;")
         self.display_clients_button.clicked.connect(self.display_clients)
         self.layout.addWidget(self.display_clients_button)
 
-        self.process_rental_button = QPushButton("Process Rental")
+        self.process_rental_button = QPushButton("Process Rental", self)
+        self.process_rental_button.setStyleSheet("font-size: 16px; padding: 10px;border-radius: 5px; border: 2px solid #607D8B; background-color: #f1f1f1;")
         self.process_rental_button.clicked.connect(self.process_rental)
         self.layout.addWidget(self.process_rental_button)
 
@@ -183,11 +193,10 @@ class MainWindow(QMainWindow):
     def display_rentals(self):
         dialog = QDialog(self)
         dialog.setWindowTitle("All Rentals")
-        layout = QVBoxLayout()
-        rentals_text_edit = QTextEdit()
+        layout = QVBoxLayout(dialog)
+        rentals_text_edit = QTextEdit(dialog)
         rentals_text_edit.setPlainText("\n".join(','.join(row.values()) for row in rentals_data))
         layout.addWidget(rentals_text_edit)
-        dialog.setLayout(layout)
         dialog.exec_()
 
     def closeEvent(self, event):
@@ -198,7 +207,6 @@ class MainWindow(QMainWindow):
         else:
             event.ignore()
 
-# Create and show the main window
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
