@@ -1,6 +1,6 @@
 import sys
 import csv
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QLabel, QPushButton, QTextEdit, QWidget, QDialog, QFormLayout, QLineEdit, QMessageBox, QComboBox
+from PyQt5.QtWidgets import *
 
 # Global variables for data storage
 rentals_data = []
@@ -189,8 +189,6 @@ class MainWindow(QMainWindow):
         layout.addWidget(rentals_text_edit)
         dialog.setLayout(layout)
         dialog.exec_()
-
-
 
     def closeEvent(self, event):
         reply = QMessageBox.question(self, 'Message', "Are you sure you want to quit?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
