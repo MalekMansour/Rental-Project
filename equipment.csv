@@ -1,1 +1,6 @@
-
+id,category,name,description,daily_rental_cost
+101,10,Hammer drill,Powerful drill for concrete and masonry,25.99
+201,20,Chainsaw,Gas-powered chainsaw for cutting wood,49.99
+202,20,Lawn mower,Self-propelled lawn mower with mulching function,19.99
+301,30,Small Compressor,5 Gallon Compressor-Portable,14.99
+501,50,Brad Nailer,Brad Nailer. Requires 3/4 to 1 1/2 Brad Nails,10.99
