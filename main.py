@@ -3,13 +3,10 @@ from PyQt5.QtGui import QIcon
 import sys
 import csv
 
-
-# Global variables for data storage
 rentals_data = []
 equipment_data = []
 clients_data = []
 
-# Function to read data from CSV files
 def read_data_from_csv():
     global rentals_data, equipment_data, clients_data
     try:
@@ -28,7 +25,6 @@ def read_data_from_csv():
         print(f"Error reading CSV files: {e}")
         sys.exit(1)
 
-# Function to write data to CSV files
 def write_data_to_csv():
     global rentals_data, equipment_data, clients_data
     try:
@@ -54,19 +50,17 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Equipment Rental System")
-        self.setGeometry(100, 100, 800, 600)  # Set window size
+        self.setGeometry(100, 100, 800, 600)  
         self.setStyleSheet("background-color: #778899;")  
         self.initUI()
-        read_data_from_csv()  # Read initial data from CSV files
+        read_data_from_csv()  
 
     def initUI(self):
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-        # Create layout
         self.layout = QVBoxLayout(self.central_widget)
 
-        # Add buttons for actions
         self.add_equipment_button = QPushButton("Add Equipment", self)
         self.add_equipment_button.setStyleSheet("font-size: 16px; padding: 10px; border-radius: 5px; border: 2px solid #4CAF50; background-color: #f1f1f1;")
         self.add_equipment_button.clicked.connect(self.add_equipment_dialog)
