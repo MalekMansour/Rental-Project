@@ -178,39 +178,7 @@ class MainWindow(QMainWindow):
         dialog.exec_()
 
     def process_rental(self):
-        dialog = QDialog(self)
-        dialog.setWindowTitle("Process Rental")
-        layout = QFormLayout()
-
-        rental_id_edit = QLineEdit()
-        current_date_edit = QLineEdit()
-        customer_id_edit = QLineEdit()
-        equipment_id_edit = QLineEdit()
-        rental_date_edit = QLineEdit()
-        return_date_edit = QLineEdit()
-        cost_of_rental_edit = QLineEdit()
-
-        layout.addRow("Rental ID:", rental_id_edit)
-        layout.addRow("Current Date:", current_date_edit)
-        layout.addRow("Customer ID:", customer_id_edit)
-        layout.addRow("Equipment ID:", equipment_id_edit)
-        layout.addRow("Rental Date:", rental_date_edit)
-        layout.addRow("Return Date:", return_date_edit)
-        layout.addRow("Cost of Rental:", cost_of_rental_edit)
-
-        process_button = QPushButton("Process")
-        process_button.clicked.connect(lambda: self.process_rental_item(rental_id_edit.text(), current_date_edit.text(), customer_id_edit.text(), equipment_id_edit.text(), rental_date_edit.text(), return_date_edit.text(), cost_of_rental_edit.text(), dialog))
-        layout.addWidget(process_button)
-
-        dialog.setLayout(layout)
-        dialog.exec_()
-
-    def process_rental_item(self, rental_id, current_date, customer_id, equipment_id, rental_date, return_date, cost_of_rental, dialog):
-        new_rental = {'rental_id': rental_id, 'date': current_date, 'customer_id': customer_id, 'equipment_id': equipment_id, 'rental_date': rental_date, 'return_date': return_date, 'cost': cost_of_rental}
-        rentals_data.append(new_rental)
-        write_data_to_csv()
         self.display_rentals()
-        dialog.close()
 
     def display_rentals(self):
         dialog = QDialog(self)
@@ -223,6 +191,7 @@ class MainWindow(QMainWindow):
         dialog.exec_()
 
 
+
     def closeEvent(self, event):
         reply = QMessageBox.question(self, 'Message', "Are you sure you want to quit?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
@@ -231,9 +200,9 @@ class MainWindow(QMainWindow):
         else:
             event.ignore()
 
+# Create and show the main window
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
-
