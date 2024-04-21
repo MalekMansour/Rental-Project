@@ -20,3 +20,4 @@ The Equipment Rental System is a software application designed to manage equipme
 
 ## Usage
 * Use the buttons in the application's graphical user interface (GUI) to perform various tasks such as adding equipment, managing clients, processing rentals, and generating reports.
+* Follow the prompts and input fields to enter relevant data and navigate through different functionalities.
