@@ -12,3 +12,8 @@ The Equipment Rental System is a software application designed to manage equipme
 * Display Clients: Access a list of all clients in the system.
 * Process Rental: Handle equipment rentals by specifying customer details, rental dates, and equipment items.
 * Generate Reports: Create reports such as sales by date, sales by customer, and item listings by category.
+
+## Installation
+1. Clone the repository to your local machine.
+2. Ensure you have Python and PyQt5 installed.
+3. Run main.py to launch the application.
