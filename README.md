@@ -1,7 +1,7 @@
 # Equipment Rental System
 A rental software project utilising Python, PyQt5, &amp; CSV.
 
-Screenshot![Screenshot-Software-Rental.png]
+![Equipment Rental System](Screenshot-Software-Rental.png)
 
 ## Overview
 The Equipment Rental System is a software application designed to manage equipment inventory, customer information, rentals, and generate reports for a rental business. This system provides a user-friendly interface for adding and deleting equipment, managing client data, processing rentals, and generating various types of reports.
