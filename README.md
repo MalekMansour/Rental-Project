@@ -9,3 +9,4 @@ The Equipment Rental System is a software application designed to manage equipme
 * Delete Equipment: Remove equipment from inventory when necessary.
 * Add New Client: Enter information for new clients or update existing client data.
 * Display Equipment: View a list of all equipment in inventory.
+* Display Clients: Access a list of all clients in the system.
