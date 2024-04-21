@@ -10,3 +10,4 @@ The Equipment Rental System is a software application designed to manage equipme
 * Add New Client: Enter information for new clients or update existing client data.
 * Display Equipment: View a list of all equipment in inventory.
 * Display Clients: Access a list of all clients in the system.
+* Process Rental: Handle equipment rentals by specifying customer details, rental dates, and equipment items.
