@@ -25,3 +25,8 @@ The Equipment Rental System is a software application designed to manage equipme
 ## Data Management
 * The system reads and writes data from CSV files (rentals.csv, equipment.csv, clients.csv) to store and retrieve information about rentals, equipment, and clients.
 * Use caution when modifying CSV files directly to avoid data inconsistencies.
+
+## License
+This project is licensed under the MIT License.
+You can contact me through Linkedin. 
+- Malek Mansour
