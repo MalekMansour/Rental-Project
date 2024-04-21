@@ -17,3 +17,6 @@ The Equipment Rental System is a software application designed to manage equipme
 1. Clone the repository to your local machine.
 2. Ensure you have Python and PyQt5 installed.
 3. Run main.py to launch the application.
+
+## Usage
+* Use the buttons in the application's graphical user interface (GUI) to perform various tasks such as adding equipment, managing clients, processing rentals, and generating reports.
