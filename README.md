@@ -21,3 +21,7 @@ The Equipment Rental System is a software application designed to manage equipme
 ## Usage
 * Use the buttons in the application's graphical user interface (GUI) to perform various tasks such as adding equipment, managing clients, processing rentals, and generating reports.
 * Follow the prompts and input fields to enter relevant data and navigate through different functionalities.
+
+## Data Management
+* The system reads and writes data from CSV files (rentals.csv, equipment.csv, clients.csv) to store and retrieve information about rentals, equipment, and clients.
+* Use caution when modifying CSV files directly to avoid data inconsistencies.
