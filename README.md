@@ -7,3 +7,4 @@ The Equipment Rental System is a software application designed to manage equipme
 ## Features
 * Add Equipment: Easily add new equipment to the inventory with details such as ID, category, name, description, and daily rental cost.
 * Delete Equipment: Remove equipment from inventory when necessary.
+* Add New Client: Enter information for new clients or update existing client data.
